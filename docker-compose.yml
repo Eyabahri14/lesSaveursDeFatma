@@ -26,7 +26,7 @@ services:
       - ./LesSaveursDeFatma_FrontSide/:/app
       - /app/node_modules
   db:
-    image: mongo  # Utilisez l'image officielle de MongoDB
+    image: mongo  #image officielle de mongo
     container_name: db
     restart: always
     volumes:
@@ -41,6 +41,6 @@ services:
     links:
       - api
       - web
-
+#le volume nous permet de stocker ses données en dehors du conteneur lui-même
 volumes:
-  data:
+  data: 
